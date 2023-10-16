@@ -45,8 +45,8 @@ struct ContentView: View {
                         }.padding()
                         Spacer()
                     }
-                    Text(data[arrayValue].desc).font(.system(size:width * 0.09 / 2.5 < width ? width * 0.09 / 2.2 : width * 0.09 / 2.5,weight: .semibold,design:.rounded)).foregroundColor(.white).lineLimit(.max).multilineTextAlignment(.center)
-                                Spacer()
+                    Text(data[arrayValue].desc).font(.system(size:width * 0.09 / 2.5 < width ? width * 0.09 / 2.2 : width * 0.09 / 2.5,weight: .semibold,design:.rounded)).foregroundColor(.white).lineLimit(.max).multilineTextAlignment(.center).padding(.bottom)
+
                             Button {
                                 arrayValue = Int.random(in: 0..<data.count)
                             } label: {
@@ -75,7 +75,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            ContentView().previewDevice(PreviewDevice(rawValue: "iPhone 14")).previewDisplayName("iPhone 14")
+            ContentView().previewDevice(PreviewDevice(rawValue: "iPhone Xr")).previewDisplayName("iPhone 14")
             ContentView().previewDevice(PreviewDevice(rawValue: "iPhone 8")).previewDisplayName("iPhone 8")
             
         }
